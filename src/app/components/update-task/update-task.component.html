@@ -1,0 +1,12 @@
+<div class="container">
+    <h2 class="text-center">Update Task: {{task_title}}</h2>
+    <h4>Name</h4>
+    <input type="text" [(ngModel)]="Task.Name">
+    <h4>Description</h4>
+    <textarea [(ngModel)]="Task.Description"></textarea>
+    <h4>Due Time</h4>
+    <input type="text" [(ngModel)]="Task.Due_date"> <br>
+    <button (click)="update()">Update Task</button> <br>
+    <button (click)="backHome()">Cancle</button>
+</div>
+

@@ -1,0 +1,11 @@
+<div class="container">
+    <h2 class="text-center">Add New Task</h2>
+    <h4>Name</h4>
+    <input #name type="text">
+    <h4>Description</h4>
+    <textarea #des></textarea>
+    <h4>Due Time</h4>
+    <input #time type="text"> <br>
+    <button (click)="save(name, des, time)">Save Task</button> <br>
+    <button (click)="backHome()">Cancle</button>
+</div>

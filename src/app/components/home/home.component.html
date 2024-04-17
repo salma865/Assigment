@@ -1,0 +1,29 @@
+<div class="container">
+
+    <h1>Tasks List</h1>
+
+<div *ngIf="task_ser.task.length == 0">
+    <p>
+        no tasks for today
+    </p>
+</div>
+
+<div *ngIf="task_ser.task.length != 0">
+    
+    <ul>
+        <li *ngFor="let task of task_ser.task; index as i">
+            {{task.Name}} <br>
+            {{task.Description}} <br>
+            {{task.Due_date}} <br>
+            <label for="complete">Completed</label>
+            <input type="checkbox" id="complete"> <br>
+            <button (click)="nav_to_update(i)">Update</button>
+            <button (click)="delete(i)">Delete</button> <br>
+        </li>
+    </ul>
+</div>
+
+    <div>
+        <button (click)="nav()">Add New Task</button>
+    </div>
+</div>
